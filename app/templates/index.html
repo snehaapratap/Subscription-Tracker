@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <h1>Subscription Renewal Tracker</h1>
+    <a href="/app/templates/add.html">Add Subscription</a>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Renewal Date</th>
+      </tr>
+      {% for sub in subscriptions %}
+      <tr>
+        <td>{{ sub.name }}</td>
+        <td>${{ sub.cost }}</td>
+        <td>{{ sub.renewal_date.date() }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/notify">Send Renewal Notifications</a>
+  </body>
+</html>

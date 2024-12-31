@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Subscription</title>
+  </head>
+  <body>
+    <h1>Add a New Subscription</h1>
+    <form method="POST" action="/add">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="cost">Cost ($):</label>
+      <input type="number" id="cost" name="cost" required />
+      <label for="renewal_date">Renewal Date:</label>
+      <input type="date" id="renewal_date" name="renewal_date" required />
+      <button type="submit">Add Subscription</button>
+    </form>
+  </body>
+</html>
